@@ -1,0 +1,27 @@
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/llParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/news_cell_bg">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/colorGreenBlue"
+        android:textSize="12sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01 January 1990"
+        android:textColor="@color/colorGrey"
+        android:textSize="10sp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
