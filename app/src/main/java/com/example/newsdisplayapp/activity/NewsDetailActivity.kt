@@ -53,6 +53,7 @@ class NewsDetailActivity : AppCompatActivity() {
         tvNewsDetail.text=HtmlCompat.fromHtml("${data.Detail_News}", HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 
+    //initialize tts
     private fun initializeTts(){
         tts = TextToSpeech(this) { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -68,6 +69,7 @@ class NewsDetailActivity : AppCompatActivity() {
         }
     }
 
+    //stop tts
     private fun stopTts(){
         if(tts != null){
             tts!!.stop()
@@ -75,6 +77,7 @@ class NewsDetailActivity : AppCompatActivity() {
         }
     }
 
+    //get simple text for tts
     private fun getTextFromHtml(htmlText: String):String{
         val spanned = HtmlCompat.fromHtml(htmlText, HtmlCompat.FROM_HTML_MODE_LEGACY)
         val chars = CharArray(spanned.length)
@@ -87,6 +90,7 @@ class NewsDetailActivity : AppCompatActivity() {
         super.onStop()
     }
 
+    //start tts speech
     private fun convertTextToSpeech(text:String) {
         tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
